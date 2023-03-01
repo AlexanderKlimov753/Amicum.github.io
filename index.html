@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/lightTheme.css" id="theme-link">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <main>
+        <header>
+            <div class="burger" v-on:click = "show = !show">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header-logo">
+                <a href="#">
+                  <img src="./pictures/amicum лого.png" alt="logo" class="header__logo">
+                </a>
+            </div>
+        </header>
+        <section class="panel">
+                <button class="panel__button">
+                    <h2 class="panel__button__sub">Начать работу</h2>
+                    <img src="./pictures/начать работу.png" alt="start" class="panel__start__pic">
+                </button>
+
+                <button class="panel__button" id="notice" v-on:click="addToNumber">
+                    <div class="notice_number">
+                        <p>{{ number }}</p>
+                      </div>
+                    <h2 class="panel__button__sub">Уведомления</h2>
+                    <img src="./pictures/уведомления.png" alt="notice" class="panel__notice__pic">
+                </button>
+
+                <button class="panel__button">
+                    <h2 class="panel__button__sub">Обучение</h2>
+                    <img src="./pictures/обучение.png" alt="training" class="panel__training__pic">
+                </button>
+
+                <button class="panel__button">
+                    <h2 class="panel__button__sub">Достижения</h2>
+                    <img src="./pictures/достижения.png" alt="progress" class="panel__progress__pic">
+                </button>
+        </section>        
+    </main>
+      <section class="burger__menu hiddenBurger showBurger" v-show="show">
+        <article class="burger__menu__header">
+            <div class="burger__menu__headerDateAndTime">
+                <h3 class="burger__menu__header__date">XX.XX.XXXX</h3>
+                <h3 class="burger__menu__header__time">XX:XX</h3>
+            </div>
+            <div class="burger__menu__headerExit">
+                <button v-on:click = "show = !show" class="burger__menu__header__exit">Выход</button> 
+            </div>
+        </article>
+
+        <article class="burger__menu__light" id="changeTheme">
+            <!--<h3 class="burger__menu__light__subs">Пока ждём</h3>
+            <label class="burger__menu__light__switch" @click="!changeTheme">
+                <input type="checkbox">
+                <span class="slider round" v-show="!changeTheme"></span>
+            </label>-->
+            <button id="theme-button"  class="switch-btn">
+            </button>
+        </article>
+
+        <article class="burger__menu__panel"> 
+            <div class="burger__menu__panel__info">
+                <h2 class="burger__menu__panel__info__name">Фамилия Имя Отчество</h2>
+                <h3 class="burger__menu__panel__info__date">XX.XX.XXXX</h3>
+                <h5 class="burger__menu__panel__info__number">Таб №: ГОКИ 0000</h5>
+                <h5 class="burger__menu__panel__info__job">Проходчик IV разряда</h5>
+            </div>
+
+            <div class="burger__menu__panel__briefing">
+                <h3>Инструктаж</h3>
+                  <div class="progressBar" @click="makeProgress">
+                    <div class="circle-out"> 
+                        <div class="progress" :style="{ transform: 'rotate('+ turn+'turn)'}"></div> 
+                        <div class="circle-in burger__menu__panel__briefing_pic"></div> 
+                    </div> 
+                  </div>
+            </div>
+
+            <div class="burger__menu__panel__examiner">
+                <h3>Предсменный <br> экзаменатор</h3>
+                <div class="progressBar2" @click="makeProgress">
+                    <div class="circle-out"> 
+                        <div class="progress" :style="{ transform: 'rotate('+ turn+'turn)'}"></div> 
+                        <div class="circle-in2 burger__menu__panel__examiner_pic"></div> 
+                    </div> 
+                  </div>
+            </div>
+
+            <div class="burger__menu__panel__testsPassed">
+                <h3>Тестов <br> выполнено</h3>
+                <div class="progressBar3" @click="makeProgress">
+                    <div class="circle-out"> 
+                        <div class="progress" :style="{ transform: 'rotate('+ turn+'turn)'}"></div> 
+                        <div class="circle-in3 burger__menu__panel__testsPassed_sub">
+                        <h2 class="burger__menu__panel__testsPassed_subTests">
+                          12  
+                        </h2> 
+                    </div> 
+                    </div> 
+                  </div>
+            </div>
+
+            <div class="burger__menu__panel__daysBeforeCertification">
+                <h3>Аттестация <br> через</h3>
+                <div class="progressBar4" @click="makeProgress">
+                    <div class="circle-out"> 
+                        <div class="progress progressRed" :style="{ transform: 'rotate('+ turn+'turn)'}"></div> 
+                        <div class="circle-in4 burger__menu__panel__daysBeforeCertification_sub">
+                         <h2 class="burger__menu__panel__daysBeforeCertification_subDays">3</h2> 
+                         <h3 class="burger__menu__panel__daysBeforeCertification_subDays__decr">дня</h3>  
+                        </div> 
+                    </div> 
+                  </div>
+            </div>
+        </article>
+      </section>
+      <script src="./js/burger.js"></script>
+      <script src="./js/notice.js"></script>
+      <script src="./js/checkbox.js"></script>
+      <script src="./js/progressBar.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.burger__menu {
+    float: left;
+    width: 45%;
+}
+
+@media (min-width: 424px) and (max-width: 769px) {
+    .panel426px {
+        display: grid;
+        justify-content: right;
+        align-content: center;
+        grid-template-columns: repeat(1, minmax(100px, 175px)) ;
+        grid-template-rows: repeat(4, minmax(185px, auto));
+        gap: 30px;
+
+    }
+
+    .panel__button {
+      margin-right: 20px;
+    }
+}
+    
+

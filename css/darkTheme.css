@@ -1,0 +1,84 @@
+main {
+    background: #143c5c;
+}
+
+h2, h3, h5 {
+    color: #FFFFFF;
+}
+
+.burger span {
+    border: 1px solid #FFFFFF;
+}
+
+/* секция "панель"*/
+
+.panel__button {
+    background-color: rgb(255, 129, 38);
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.panel__button__sub {
+    color: white; 
+}
+
+.notice_number::before {
+    background-color: #40a940;
+}
+
+p {
+    color: white
+}
+
+
+/* гриды */
+
+.panel__start, .panel__notice, .panel__training, .panel__progress {
+    background-color: rgb(255, 129, 38);
+}
+
+/* бургер*/
+
+.burger__menu {
+    background: #192a42;
+}   
+
+.burger__menu__header__exit {
+    background: #192a42;
+    color: white
+}
+
+.burger__menu__header__exit:hover {
+    background-color: rgb(210, 30, 39);
+}
+
+.burger__menu__panel__info {
+    background-color: #405472;
+}
+
+.burger__menu__panel__briefing, .burger__menu__panel__examiner, .burger__menu__panel__testsPassed, .burger__menu__panel__daysBeforeCertification {
+    background-color: #405472;
+}
+
+.burger__menu__panel__info {
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.burger__menu__panel__briefing {
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.burger__menu__panel__examiner {
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.burger__menu__panel__testsPassed {
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.burger__menu__panel__daysBeforeCertification {
+    box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);
+}
+
+.circle-in, .circle-in2, .circle-in3, .circle-in4 {
+    background-color: #405472;
+  }

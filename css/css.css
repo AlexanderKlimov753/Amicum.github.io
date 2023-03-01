@@ -1,0 +1,330 @@
+@import url('./burger.css');
+@import url('./checkbox.css');
+@import url('./progressBar.css');
+@import url('./bar.css');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+   
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+   /* хэдр */
+
+header {
+    height: 100px;
+    margin-bottom: 125px;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    position: fixed;
+    width: 43.37px;
+    height: 24px;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 43.37px;
+    height: 0;
+    cursor: pointer;
+}
+
+.header__logo  {
+    display: flex;
+    height: 50px;
+    position: fixed;
+    right: 25px;
+    top: 10px;
+}
+
+.burger__menu{
+    visibility: hidden;
+}
+
+/* секция "панель"*/
+
+.panel__button {
+    /*width: 250px;
+    height: 200px;*/
+ 
+    position: relative;
+    /*background-color: rgb(255, 129, 38);*/
+    border: none;
+    transition: 0.5s all;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    /*box-shadow: 0px 10px 3px -4px rgba(34, 60, 80, 0.2);*/
+    border-radius: 3px;
+}
+
+/*.panel__button:hover {
+    width: 260px;
+    height: 210px;
+}*/
+
+.panel__button__sub {
+    /*color: white; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: calc(20px + (27 - 20)*((100vw - 320px) / (2560 - 320)));
+}
+
+.panel__start__pic, .panel__notice__pic, .panel__training__pic, .panel__progress__pic  {
+    position: absolute;
+    top: 40%;
+    width: 90px;
+    height: auto;
+}
+
+.panel__start__pic {
+    height: 40%;
+    width: 40%;
+}
+
+/*.notice_circle {
+    position: relative;
+}*/
+
+.notice_number::before {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    /*background-color: #47f347;*/
+    content: "";
+    top: -65%;
+    right: 0px;
+}
+
+#notice {
+    position: relative;
+}
+
+.notice_number {
+    position: absolute;
+    top: -6%;
+    right: -15px;
+}
+
+p {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    font-size: 20px;
+}
+
+
+/* гриды */
+
+.panel {
+    display: grid;
+    justify-content: center;
+    /*justify-items: center;*/
+    align-content: center;
+    /*grid-template-columns: 280px 280px ;
+    grid-template-rows: 220px 220px;*/
+    grid-template-columns: repeat(2, minmax(100px, 250px)) ;
+    grid-template-rows: repeat(2, minmax(185px, auto));
+    gap: 30px;
+    padding-top: 60px;
+}
+
+/*.panel__start, .panel__notice, .panel__training, .panel__progress {
+    background-color: rgb(255, 129, 38);
+}*/
+
+/* адаптация*/
+
+.burger__menu {
+    float: left;
+    width: calc(275px + (275 - 100)*((100vw - 320px) / (2560 - 320)));
+}
+
+/*@media (min-width: 1919px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(4, minmax(150px, 300px)) ;
+        grid-template-rows: repeat(1, minmax(200px, auto));
+        gap: 30px;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 770px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(1, minmax(90px, 235px)) ;
+        grid-template-rows: repeat(4, minmax(185px, auto));
+        gap: 30px;
+    }
+
+    .burger__menu {
+        float: left;
+        width: 45%;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 770px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(1, minmax(90px, 235px)) ;
+        grid-template-rows: repeat(4, minmax(185px, auto));
+        gap: 30px;
+    }
+
+    .burger__menu {
+        float: left;
+        width: 45%;
+    }
+}*/
+
+/*@media (min-width: 319px) and (max-width: 423px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(1, minmax(90px, 190px)) ;
+        grid-template-rows: repeat(4, minmax(185px, auto));
+        gap: 30px;
+    }
+
+    .burger__menu {
+        float: left;
+        width: 45%;
+    }
+
+    /*.panel__button {
+      margin-right: calc(30px + (30 - 20)*((100vw - 423px) / (319 - 423)));
+    }*/
+/*}*/
+
+
+
+/* резиновая адаптация*/
+
+@media (min-width: 1919px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(2, minmax(150px, 300px)) ;
+        grid-template-rows: repeat(2, minmax(200px, auto));
+        gap: 30px;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 770px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(2, minmax(90px, 235px)) ;
+        grid-template-rows: repeat(2, minmax(185px, auto));
+        gap: 30px;
+    }
+}
+
+@media (min-width: 424px) and (max-width: 570px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(2, minmax(80px, 200px)) ;
+        grid-template-rows: repeat(2, minmax(185px, auto));
+        gap: 20px;
+    }
+
+    .notice_number::before {
+        width: 30px;
+        height: 30px;
+    }
+    
+    p {
+        top: 4px;
+        right: 10px;
+    }
+
+    .burger__menu {
+        padding: 20px 10px;
+    }
+
+    .burger__menu__panel {
+        gap: 5px;
+    }
+    
+}
+
+@media (min-width: 319px) and (max-width: 423px) {
+    .panel {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(2, minmax(90px, 190px)) ;
+        grid-template-rows: repeat(2, minmax(185px, auto));
+        gap: 20px;
+    }
+
+    /*.burger__menu {
+        float: left;
+        width: 90%;
+    }*/
+
+    .notice_number::before {
+        width: 30px;
+        height: 30px;
+    }
+    
+    p {
+        top: 4px;
+        right: 10px;
+    }
+
+    .burger__menu {
+        padding: 20px 10px;
+    }
+
+    .burger__menu__panel {
+        gap: 5px;
+    }
+
+    /*.panel__button {
+      margin-right: calc(30px + (30 - 20)*((100vw - 423px) / (319 - 423)));
+    }*/
+}
+    h2 {
+        font-size: calc(18px + (18 - 10)*((100vw - 320px) / (2560 - 320)));
+    }
+    
+    h3 {
+        font-size: calc(16px + (16 - 10)*((100vw - 320px) / (2560 - 320)));
+    }
+    
+    h5 {
+        font-size: calc(11px + (11 - 10)*((100vw - 320px) / (2560 - 320)));
+    }
+
+
+
+
